@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Công cụ Tính Toán</title>
+    <title>Tính giá đệm đặt</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -17,14 +17,14 @@
                 <h2>Hướng Dẫn Sử Dụng</h2>
                 <p>Đây là công cụ giúp đại lý tính toán giá đệm đặt. Để sử dụng:</p>
                 <ol>
-                    <li>Nhập giá trị cho Chiều dài và Chiều rộng.</li>
-                    <li>Chọn độ dày mong muốn từ thanh chọn (5, 7 hoặc 9).</li>
-                    <li>Chọn tùy chọn mong muốn từ thanh chọn.</li>
-                    <li>Nhấn nút "Tính Toán" để xem kết quả.</li>
+                    <li>Nhập giá trị cho Chiều rộng và Chiều dài.</li>
+                    <li>Chọn độ dày mong muốn từ thanh chọn (5 cm, 7 cm hoặc 9 cm ).</li>
+                    <li>Chọn Chất liệu mong muốn từ thanh chọn.</li>
+                    <li>Nhấn nút "Tính giá" để xem giá bán.</li>
                 </ol>
             </section>
             <section class="calculator">
-                <h2>Nhập Dữ Liệu</h2>
+                <h2>Nhập kích thước cần đặt</h2>
                 <form id="calcForm">
                     <div class="form-group">
                         <label for="var2">Chiều rộng (cm):</label>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="option">Tùy chọn:</label>
+                        <label for="option">Chất liệu:</label>
                         <div id="option" class="options">
                             <div class="option" data-value="1">Valize</div>
                             <div class="option" data-value="2">Cotton</div>
