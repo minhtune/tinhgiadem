@@ -1,29 +1,63 @@
-document.getElementById('calcForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    var var1 = parseFloat(document.getElementById('var1').value);
-    var var2 = parseFloat(document.getElementById('var2').value);
-    var var3 = parseFloat(document.getElementById('var3').value);
+document.addEventListener('DOMContentLoaded', function() {
+    const options = document.querySelectorAll('.option');
+    let selectedOption = null;
 
-    var result;
-    
-    // Chọn công thức dựa trên giá trị của biến thứ ba
-    switch(var3) {
-        case 5:
-            // Công thức cho biến thứ ba là 5
-            result = 210000*(var1*var2/10000);
-            break;
-        case 7:
-            // Công thức cho biến thứ ba là 7
-            result = 230000*(var1*var2/10000);
-            break;
-        case 9:
-            // Công thức cho biến thứ ba là 9
-            result = 300000*(var1*var2/10000);
-            break;
-        default:
-            result = 'Lỗi: Giá trị không hợp lệ';
-    }
+    options.forEach(option => {
+        option.addEventListener('click', function() {
+            options.forEach(opt => opt.classList.remove('selected'));
+            this.classList.add('selected');
+            selectedOption = parseInt(this.getAttribute('data-value'));
+        });
+    });
 
-    document.getElementById('result').innerText = 'Kết quả: ' + result;
+    document.getElementById('calcForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        var var1 = parseFloat(document.getElementById('var1').value);
+        var var2 = parseFloat(document.getElementById('var2').value);
+        var var3 = parseFloat(document.getElementById('var3').value);
+
+        if (selectedOption === null) {
+            alert('Vui lòng chọn một tùy chọn.');
+            return;
+        }
+
+        var result;
+        
+        // Chọn công thức dựa trên giá trị của biến thứ ba
+        switch(var3) {
+            case 5:
+                result = 210000 * (var1 * var2 / 10000);
+                break;
+            case 7:
+                result = 230000 * (var1 * var2 / 10000);
+                break;
+            case 9:
+                result = 300000 * (var1 * var2 / 10000);
+                break;
+            default:
+                result = 'Lỗi: Giá trị không hợp lệ';
+        }
+
+        // Thêm giá trị cho mỗi tùy chọn
+        switch(selectedOption) {
+            case 1:
+                result += 50000; // Giá trị thêm cho Option 1
+                break;
+            case 2:
+                result += 100000; // Giá trị thêm cho Option 2
+                break;
+            case 3:
+                result += 150000; // Giá trị thêm cho Option 3
+                break;
+            default:
+                result = 'Lỗi: Tùy chọn không hợp lệ';
+        }
+
+        if (typeof result === 'number') {
+            result = result.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
+        }
+
+        document.getElementById('result').innerText = 'Kết quả: ' + result;
+    });
 });

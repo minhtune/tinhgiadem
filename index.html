@@ -12,12 +12,13 @@
             <h1>Tính giá đệm</h1>
         </header>
         <main>
-            <section class="guide">
+            <section class="guide"> 
                 <h2>Hướng Dẫn Sử Dụng</h2>
                 <p>Đây là công cụ giúp đại lý tính toán giá đệm đặt. Để sử dụng:</p>
                 <ol>
                     <li>Nhập giá trị cho Chiều dài và Chiều rộng.</li>
                     <li>Chọn độ dày mong muốn từ danh sách (5, 7 hoặc 9).</li>
+                    <li>Chọn tùy chọn mong muốn từ thanh chọn.</li>
                     <li>Nhấn nút "Tính Toán" để xem kết quả.</li>
                 </ol>
             </section>
@@ -39,6 +40,14 @@
                             <option value="7">7</option>
                             <option value="9">9</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="option">Tùy chọn:</label>
+                        <div id="option" class="options">
+                            <div class="option" data-value="1">Option 1</div>
+                            <div class="option" data-value="2">Option 2</div>
+                            <div class="option" data-value="3">Option 3</div>
+                        </div>
                     </div>
                     <button type="submit">Tính Toán</button>
                 </form>
