@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var result;
         var day5 = 210000;
-        var day7 = 230000;
-        var day9 = 280000;
+        var day7 = 260000;
+        var day9 = 310000;
         if(var1 >= 200)
         {
             day5=day5+50000;
