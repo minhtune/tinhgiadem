@@ -62,7 +62,24 @@ document.addEventListener('DOMContentLoaded', function() {
             day7=day7+50000;
             day9=day9+50000;
         }
-        
+        switch(selectedOption) 
+        {
+            case 1:
+                
+                break;
+            case 2:
+                day5=day5+20000;
+                day7=day7+20000;
+                day9=day9+20000;
+                break;
+            case 3:
+                day5=day5+60000;
+                day7=day7+60000;
+                day9=day9+60000;
+                break;
+            default:
+                result = 'Lỗi: Tùy chọn không hợp lệ';
+        }
         // Chọn công thức dựa trên giá trị của độ dày
         switch(selectedThickness) {
             case 5:
@@ -79,19 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Thêm giá trị cho mỗi tùy chọn
-        switch(selectedOption) {
-            case 1:
-                
-                break;
-            case 2:
-                result += 20000; // Giá trị thêm cho Option 2
-                break;
-            case 3:
-                result += 70000; // Giá trị thêm cho Option 3
-                break;
-            default:
-                result = 'Lỗi: Tùy chọn không hợp lệ';
-        }
+        
 
         if (typeof result === 'number') {
             result = result.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
