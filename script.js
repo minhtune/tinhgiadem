@@ -26,6 +26,22 @@ document.addEventListener('DOMContentLoaded', function() {
         var var1 = parseFloat(document.getElementById('var1').value);
         var var2 = parseFloat(document.getElementById('var2').value);
 
+        // Kiểm tra điều kiện chiều dài và chiều rộng
+        if (var1 <= var2) {
+            alert('Chiều dài phải lớn hơn chiều rộng.');
+            return;
+        }
+        
+        if (var1 <= 100) {
+            alert('Chiều dài phải lớn hơn 100.');
+            return;
+        }
+
+        if (var2 <= 50) {
+            alert('Chiều rộng phải lớn hơn 50.');
+            return;
+        }
+
         if (selectedOption === null) {
             alert('Vui lòng chọn một tùy chọn.');
             return;
