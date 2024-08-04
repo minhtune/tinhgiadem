@@ -53,17 +53,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         var result;
+        var day5 = 210000;
+        var day7 = 230000;
+        var day9 = 280000;
+        if(var1 >= 200)
+        {
+            day5=day5+50000;
+            day7=day7+50000;
+            day9=day9+50000;
+        }
         
         // Chọn công thức dựa trên giá trị của độ dày
         switch(selectedThickness) {
             case 5:
-                result = 210000 * (var1 * var2 / 10000);
+                result = day5 * (var1 * var2 / 10000);
                 break;
             case 7:
-                result = 230000 * (var1 * var2 / 10000);
+                result = day7 * (var1 * var2 / 10000);
                 break;
             case 9:
-                result = 300000 * (var1 * var2 / 10000);
+                result = day9 * (var1 * var2 / 10000);
                 break;
             default:
                 result = 'Lỗi: Giá trị không hợp lệ';
@@ -72,13 +81,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Thêm giá trị cho mỗi tùy chọn
         switch(selectedOption) {
             case 1:
-                result += 50000; // Giá trị thêm cho Option 1
+                
                 break;
             case 2:
-                result += 100000; // Giá trị thêm cho Option 2
+                result += 20000; // Giá trị thêm cho Option 2
                 break;
             case 3:
-                result += 150000; // Giá trị thêm cho Option 3
+                result += 70000; // Giá trị thêm cho Option 3
                 break;
             default:
                 result = 'Lỗi: Tùy chọn không hợp lệ';
@@ -88,6 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
             result = result.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
         }
 
-        document.getElementById('result').innerText = 'Kết quả: ' + result;
+        document.getElementById('result').innerText = 'Giá bán : ' + result;
     });
 });
