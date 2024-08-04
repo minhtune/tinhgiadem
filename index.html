@@ -8,17 +8,48 @@
 </head>
 <body>
     <div class="container">
-        <h1>Công cụ Tính Toán</h1>
-        <form id="calcForm">
-            <label for="var1">Biến 1:</label>
-            <input type="number" id="var1" name="var1" required>
-            <label for="var2">Biến 2:</label>
-            <input type="number" id="var2" name="var2" required>
-            <label for="var3">Biến 3:</label>
-            <input type="number" id="var3" name="var3" required>
-            <button type="submit">Tính Toán</button>
-        </form>
-        <h2 id="result"></h2>
+        <header>
+            <h1>Công cụ Tính Toán</h1>
+        </header>
+        <main>
+            <section class="guide">
+                <h2>Hướng Dẫn Sử Dụng</h2>
+                <p>Đây là công cụ giúp bạn thực hiện các phép tính dựa trên ba biến đầu vào. Để sử dụng:</p>
+                <ol>
+                    <li>Nhập giá trị cho Biến 1 và Biến 2.</li>
+                    <li>Chọn giá trị cho Biến 3 từ danh sách (5, 7 hoặc 9).</li>
+                    <li>Nhấn nút "Tính Toán" để xem kết quả.</li>
+                </ol>
+            </section>
+            <section class="calculator">
+                <h2>Nhập Dữ Liệu</h2>
+                <form id="calcForm">
+                    <div class="form-group">
+                        <label for="var1">Biến 1:</label>
+                        <input type="number" id="var1" name="var1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="var2">Biến 2:</label>
+                        <input type="number" id="var2" name="var2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="var3">Biến 3:</label>
+                        <select id="var3" name="var3" required>
+                            <option value="5">5</option>
+                            <option value="7">7</option>
+                            <option value="9">9</option>
+                        </select>
+                    </div>
+                    <button type="submit">Tính Toán</button>
+                </form>
+                <div class="result">
+                    <h2 id="result"></h2>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Công cụ Tính Toán. Tất cả các quyền được bảo lưu.</p>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
