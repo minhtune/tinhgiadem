@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Công cụ Tính Toán</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -17,7 +18,7 @@
                 <p>Đây là công cụ giúp đại lý tính toán giá đệm đặt. Để sử dụng:</p>
                 <ol>
                     <li>Nhập giá trị cho Chiều dài và Chiều rộng.</li>
-                    <li>Chọn độ dày mong muốn từ danh sách (5, 7 hoặc 9).</li>
+                    <li>Chọn độ dày mong muốn từ thanh chọn (5, 7 hoặc 9).</li>
                     <li>Chọn tùy chọn mong muốn từ thanh chọn.</li>
                     <li>Nhấn nút "Tính Toán" để xem kết quả.</li>
                 </ol>
@@ -26,20 +27,20 @@
                 <h2>Nhập Dữ Liệu</h2>
                 <form id="calcForm">
                     <div class="form-group">
-                        <label for="var1">Chiều dài ( cm ):</label>
+                        <label for="var1">Chiều dài (cm):</label>
                         <input type="number" id="var1" name="var1" required>
                     </div>
                     <div class="form-group">
-                        <label for="var2">Chiều rộng ( cm ):</label>
+                        <label for="var2">Chiều rộng (cm):</label>
                         <input type="number" id="var2" name="var2" required>
                     </div>
                     <div class="form-group">
-                        <label for="var3">Độ dày ( cm ):</label>
-                        <select id="var3" name="var3" required>
-                            <option value="5">5</option>
-                            <option value="7">7</option>
-                            <option value="9">9</option>
-                        </select>
+                        <label for="thickness">Độ dày (cm):</label>
+                        <div id="thickness" class="options">
+                            <div class="option" data-value="5">5</div>
+                            <div class="option" data-value="7">7</div>
+                            <div class="option" data-value="9">9</div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="option">Tùy chọn:</label>

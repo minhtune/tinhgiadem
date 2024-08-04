@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const options = document.querySelectorAll('.option');
+    const options = document.querySelectorAll('#option .option');
+    const thicknessOptions = document.querySelectorAll('#thickness .option');
     let selectedOption = null;
+    let selectedThickness = null;
 
     options.forEach(option => {
         option.addEventListener('click', function() {
@@ -10,22 +12,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    thicknessOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            thicknessOptions.forEach(opt => opt.classList.remove('selected'));
+            this.classList.add('selected');
+            selectedThickness = parseInt(this.getAttribute('data-value'));
+        });
+    });
+
     document.getElementById('calcForm').addEventListener('submit', function(event) {
         event.preventDefault();
         
         var var1 = parseFloat(document.getElementById('var1').value);
         var var2 = parseFloat(document.getElementById('var2').value);
-        var var3 = parseFloat(document.getElementById('var3').value);
 
         if (selectedOption === null) {
             alert('Vui lòng chọn một tùy chọn.');
             return;
         }
 
+        if (selectedThickness === null) {
+            alert('Vui lòng chọn độ dày.');
+            return;
+        }
+
         var result;
         
-        // Chọn công thức dựa trên giá trị của biến thứ ba
-        switch(var3) {
+        // Chọn công thức dựa trên giá trị của độ dày
+        switch(selectedThickness) {
             case 5:
                 result = 210000 * (var1 * var2 / 10000);
                 break;
