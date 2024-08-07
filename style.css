@@ -128,3 +128,32 @@ background-color: #007bff;
 color: #fff;
 font-size: 0.9em;
 }
+header {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #007bff; /* Đảm bảo màu nền */
+    border-bottom: 2px solid #e9ecef;
+    display: flex;
+    align-items: center;
+}
+
+.home-icon {
+    position: absolute;
+    left: 20px; /* Đặt biểu tượng ở góc trái */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: #1b334c;
+    text-decoration: none;
+}
+
+.home-icon:hover {
+    color: #819fc0;
+}
+
+header h1 {
+    flex: 1; /* Cho phép tiêu đề chiếm không gian còn lại */
+    text-align: center; /* Căn giữa tiêu đề */
+    margin: 0; /* Xóa margin mặc định */
+    color: #333; /* Màu chữ tiêu đề */
+}
