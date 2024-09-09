@@ -157,3 +157,17 @@ header h1 {
     margin: 0; /* Xóa margin mặc định */
     color: #333; /* Màu chữ tiêu đề */
 }
+
+.feature-icon {
+    position: absolute;
+    left: 60px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: #1c3046;
+    text-decoration: none;
+}
+
+.feature-icon:hover {
+    color: #a7abb0;
+}
