@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tính Năng Khác</title>
+    <title>Công cụ Tính Toán</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -12,21 +14,43 @@
             <a href="https://demvinh.com" class="home-icon">
                 <i class="fas fa-home"></i>
             </a>
-            <a href="https://demvinh.com/tinhgiadem" class="feature-icon">
-                <i class="fas fa-cogs"></i>
-            </a>
-            <h1>Tính Năng Khác</h1>
+            <h1>Tính giá đệm</h1>
         </header>
         <main>
-            <section class="guide">
-                <h2>Chức Năng Mới</h2>
-                <p>Đây là một chức năng mới mà bạn có thể thêm vào trang con.</p>
+            <section class="guide"> 
+                </ol>
+            </section>
+            <section class="calculator">
+                <h2>Nhập kích thước cần đặt</h2>
+                <form id="calcForm">
+                    <div class="form-group">
+                        <label for="var2">Chiều rộng (cm):</label>
+                        <input type="number" id="var2" name="var2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="var2">Chiều dài (cm):</label>
+                        <input type="number" id="var1" name="var1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="thickness">Độ dày (cm):</label>
+                        <div id="thickness" class="options">
+                            <div class="option" data-value="12">12</div>
+                            <div class="option" data-value="15">15</div>
+                            <div class="option" data-value="18">18</div>
+                            <div class="option" data-value="22">22</div>
+                        </div>
+                    </div>
+                    <button type="submit">Tính giá</button>
+                </form>
+                <div class="result"> 
+                    <h2 id="result"></h2>
+                </div>
             </section>
         </main>
         <footer>
-            <p>&copy; 2024 Trang Tính Năng Khác. Tất cả các quyền được bảo lưu.</p>
+            <p>&copy; Sản phẩm của demvinh.com</p>
         </footer>
     </div>
-    <script src="script.js"></script>
+    <script src="script2manh.js"></script>
 </body>
 </html>
