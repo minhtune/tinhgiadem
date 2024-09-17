@@ -1,15 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const options = document.querySelectorAll('#option .option');
+  
     const thicknessOptions = document.querySelectorAll('#thickness .option');
     let selectedThickness = null;
 
-    options.forEach(option => {
-        option.addEventListener('click', function() {
-            options.forEach(opt => opt.classList.remove('selected'));
-            this.classList.add('selected');
-            selectedOption = parseInt(this.getAttribute('data-value'));
-        });
-    });
+    
 
     thicknessOptions.forEach(option => {
         option.addEventListener('click', function() {
@@ -48,37 +42,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         var result;
-        var day5 = 210000;
-        var day7 = 260000;
-        var day9 = 310000;
-        if(var1 >= 200)
-        {
-            day5=day5+50000;
-            day7=day7+50000;
-            day9=day9+50000;
-        }
-        
+        var day12 = 547000;
+        var day15 = 623000;
+        var day18 = 700000;
+        var day22 = 827000;
         // Chọn công thức dựa trên giá trị của độ dày
         switch(selectedThickness) {
             case 12:
-                result = day5 * (var1 * var2 / 10000);
+                result = day12 * (var1 * var2 / 10000);
                 break;
             case 15:
-                result = day7 * (var1 * var2 / 10000);
+                result = day15 * (var1 * var2 / 10000);
                 break;
             case 18:
-                result = day9 * (var1 * var2 / 10000);
+                result = day18 * (var1 * var2 / 10000);
                 break;
             case 22:
-                result = day9 * (var1 * var2 / 10000);
+                result = day22 * (var1 * var2 / 10000);
                 break;
             default:
                 result = 'Lỗi: Giá trị không hợp lệ';
         }
-
-        // Thêm giá trị cho mỗi tùy chọn
-        
-
+        result = Math.ceil(result / 10000) * 10000;
         if (typeof result === 'number') {
             result = result.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
         }

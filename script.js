@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Thêm giá trị cho mỗi tùy chọn
         
-
+        result = Math.ceil(result / 10000) * 10000;
         if (typeof result === 'number') {
             result = result.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
         }
